@@ -27,15 +27,15 @@ public class Java_Method {
         }
     }
 
-    static int classifyTriangle(int a, int b, int c) {
-        if (a <= 0 || b <= 0 || c <= 0
-                || (long) a + b <= c
-                || (long) a + c <= b
-                || (long) b + c <= a) {
+    static int classifyTriangle(int side1, int side2, int side3) {
+        if (side1 <= 0 || side2 <= 0 || side3 <= 0
+                || (long) side1 + side2 <= side3
+                || (long) side1 + side3 <= side2
+                || (long) side2 + side3 <= side1) {
             return 0;
-        } else if (a == b && b == c) {
+        } else if (side1 == side2 && side2 == side3) {
             return 1;
-        } else if (a == b || a == c || b == c) {
+        } else if (side1 == side2 || side1 == side3 || side2 == side3) {
             return 2;
         } else {
             return 3;
